@@ -11,8 +11,19 @@ import UIKit
 class SecondViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     
+    
+    var inputname: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if inputname == ""{
+            resultLabel.text = "名前が入力されていません"
+            resultLabel.textColor = UIColor.blue
+        }else{
+            resultLabel.text = "こんにちは、\(inputname)さん"
+        }
+        
 
         // Do any additional setup after loading the view.
     }
